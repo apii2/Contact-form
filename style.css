@@ -1,0 +1,91 @@
+:root{
+  --Karla: 'Karla', sans-serif;
+
+  --green-lighter: 148, 38%, 91%;
+  --green-medium: 169, 82%, 27%;
+  --green-medium-dark: 169, 82%, 13%;
+  --red: 0, 66%, 54%;
+  --white: 0, 0%, 100%;
+  --grey-medium: 186, 15%, 59%;
+  --grey-darker: 187, 24%, 22%;
+
+  --green-lighter-hsl: hsl(var(--green-lighter));
+  --green-medium-hsl: hsl(var(--green-medium));
+  --red-hsl: hsl(var(--red));
+  --white-hsl: hsl(var(--white));
+  --grey-medium-hsl: hsl(var(--grey-medium));
+  --grey-darker-hsl: hsl(var(--grey-darker));
+}
+
+*{
+  font-family: var(--Karla);
+  color: var(--grey-darker-hsl);
+}
+
+.row{
+  height: 100vh;
+  background-color: var(--green-lighter-hsl);
+}
+
+.row > div{
+  background-color: var(--white-hsl);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+input[type="text"], .query-section > div, textarea, input[type="checkbox"]{
+  border: solid 2px hsl(var(--grey-darker), 0.3);
+}
+
+textarea{
+  min-height: 6rem !important;
+}
+
+input[type="text"], .query-section > div, input[type="submit"]{
+  height: 2.8rem;
+  min-height: 2rem;
+}
+
+input[type="text"]:hover, input[type="text"]:focus-visible, input[type="text"]:active, textarea:hover, textarea:active, textarea:focus-visible, input[type="checkbox"]:active{
+  border-color: var(--green-medium-hsl);
+  outline: var(--green-medium-hsl);
+}
+
+.query-section > div:has(input[type="radio"]:checked){
+  background-color: var(--green-lighter-hsl);
+  border-color: var(--green-medium-hsl);
+}
+
+input[type="radio"]:active, input[type="radio"]:checked{
+  background-color: var(--green-lighter-hsl);
+}
+
+input[type="checkbox"]:focus, input[type="radio"]:focus{
+  box-shadow: 0 0 0 0;
+}
+
+input[type="checkbox"]:checked{
+  background-color: var(--green-medium-hsl);
+  border-color: var(--green-medium-hsl);
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 49%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--green-medium-hsl);
+}
+
+input[type="submit"]{
+  background-color: var(--green-medium-hsl);
+  color: var(--white-hsl);
+}
+
+input[type="submit"]:hover{
+  background-color: hsl(var(--green-medium-dark));
+}

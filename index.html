@@ -2,51 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Contact form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Contact form</title>
 </head>
 <body>
-
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-6">
+        <h2 class="fw-bold mb-3">Contact Us</h2>
+        
+        <form>
+          <section class="d-flex gap-3 mb-3">
+            <div class="w-100">
+              <label for="fname" class="form-label">First Name &#42;</label>
+              <input type="text" id="fname" name="fname" class="form-control-lg w-100">
+              <div class="d-none">This field is required</div>
+            </div>
+            
+            <div class="w-100">
+              <label for="lname" class="form-label">Last Name &#42;</label>
+              <input type="text" id="lname" name="lname" class="form-control-lg w-100">
+              <div class="d-none">This field is required</div>
+            </div>
+          </section>
+          
+          <label for="email" class="form-label">Email Address &#42;</label>
+          <input type="text" id="email" name="email" class="form-control-lg w-100 mb-3">
+          <div class="d-none">Please enter a valid email address</div>
+          <div class="d-none">This field is required</div>
+          
+          <p>Query Type &#42;</p>
+          <section class="query-section d-flex gap-3 mb-3">
+            <div class="w-50 rounded-3 px-4 py-2  position-relative">
+              <input type="radio" id="general_enquiry" name="query_type" value="general_enquiry" class="form-check-input">
+              <label for="general_enquiry" class="form-check-label ms-2">General Enquiry</label>
+            </div>
+            <div class="w-50 rounded-3 px-4 py-2  position-relative">
+              <input type="radio" id="support_request" name="query_type" value="support_request" class="form-check-input">      
+              <label for="support_request" class="form-check-label ms-2">Support Request</label>
+            </div>
+            <div class="d-none">Please select a query type</div>
+          </section>
+          
+          <label for="message" class="form-label">Message &#42;</label>
+          <textarea id="message" name="message" class="form-control-lg w-100 mb-3"></textarea>
+          <div class="d-none">This field is required</div>
+          
+          <div class="mb-3">
+            <input type="checkbox" id="consent" name="consent" class="form-check-input">
+            <label for="consent" class="form-check-label">I consent to being contacted by the team &#42;</label>
+            <div class="d-none">To submit this form, please consent to being contacted</div>
+          </div>
+            
+          <input type="submit" value="Submit" class="border-0 w-100 rounded-3">
+          
+          <div class="d-none">Message Sent!</div>
+          <div class="d-none">Thanks for completing the form. We'll be in touch soon!</div>
+        </form>
+      </div>
+    </div>
   </div>
+  
+  <div style="display: none;">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/apii2">Apeksha Shrestha</a>.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
