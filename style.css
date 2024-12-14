@@ -29,8 +29,23 @@
 
 .row > div{
   background-color: var(--white-hsl);
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .row > div{
+    padding: 2rem;
+  }
+}
+
+label, p, button[type="submit"]{
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  label, p, button[type="submit"]{
+    font-size: 1rem;
+  }
 }
 
 input[type="text"], .query-section > div, textarea, input[type="checkbox"]{
@@ -38,17 +53,39 @@ input[type="text"], .query-section > div, textarea, input[type="checkbox"]{
 }
 
 textarea{
-  min-height: 6rem !important;
+  min-height: 8rem !important;
 }
 
-input[type="text"], .query-section > div, input[type="submit"]{
-  height: 2.8rem;
+@media (min-width: 768px) {
+  textarea{
+    min-height: 6rem !important;
+  }
+}
+
+input[type="text"], .query-section > div{
+  height: 2.6rem;
   min-height: 2rem;
+}
+
+@media (min-width: 768px) {
+  input[type="text"], .query-section > div{
+    height: 2.8rem;
+  }
 }
 
 input[type="text"]:hover, input[type="text"]:focus-visible, input[type="text"]:active, textarea:hover, textarea:active, textarea:focus-visible, input[type="checkbox"]:active{
   border-color: var(--green-medium-hsl);
   outline: var(--green-medium-hsl);
+}
+
+.query-section label{
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .query-section label{
+    font-size: 1rem;
+  }
 }
 
 .query-section > div:has(input[type="radio"]:checked){
@@ -73,7 +110,7 @@ input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
   left: 27px;
-  top: 49%;
+  top: 53%;
   transform: translateY(-50%);
   width: 10px;
   height: 10px;
@@ -81,11 +118,23 @@ input[type="radio"]:checked + label::after {
   background-color: var(--green-medium-hsl);
 }
 
-input[type="submit"]{
-  background-color: var(--green-medium-hsl);
-  color: var(--white-hsl);
+@media (min-width: 768px) {
+  input[type="radio"]:checked + label::after {
+    top: 49%;
+  }
 }
 
-input[type="submit"]:hover{
+button[type="submit"]{
+  background-color: var(--green-medium-hsl);
+  color: var(--white-hsl);
+  padding: 8px 0;
+}
+@media (min-width: 768px) {
+  button[type="submit"]{
+    padding: 10px 0;
+  }
+}
+
+button[type="submit"]:hover{
   background-color: hsl(var(--green-medium-dark));
 }

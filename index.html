@@ -18,11 +18,11 @@
 <body>
   <div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-6">
+      <div class="col-11 col-md-8 col-lg-6 rounded-4">
         <h2 class="fw-bold mb-3">Contact Us</h2>
         
         <form>
-          <section class="d-flex gap-3 mb-3">
+          <section class="d-flex flex-column flex-md-row gap-3 mb-3">
             <div class="w-100">
               <label for="fname" class="form-label">First Name &#42;</label>
               <input type="text" id="fname" name="fname" class="form-control-lg w-100">
@@ -41,13 +41,13 @@
           <div class="d-none">Please enter a valid email address</div>
           <div class="d-none">This field is required</div>
           
-          <p>Query Type &#42;</p>
-          <section class="query-section d-flex gap-3 mb-3">
-            <div class="w-50 rounded-3 px-4 py-2  position-relative">
+          <p class="mb-2 mb-md-3">Query Type &#42;</p>
+          <section class="query-section d-flex flex-column flex-md-row gap-2 gap-md-3 mb-3">
+            <div class="w-100 w-md-50 rounded-3 px-4 py-2  position-relative">
               <input type="radio" id="general_enquiry" name="query_type" value="general_enquiry" class="form-check-input">
               <label for="general_enquiry" class="form-check-label ms-2">General Enquiry</label>
             </div>
-            <div class="w-50 rounded-3 px-4 py-2  position-relative">
+            <div class="w-100 w-md-50 rounded-3 px-4 py-2  position-relative">
               <input type="radio" id="support_request" name="query_type" value="support_request" class="form-check-input">      
               <label for="support_request" class="form-check-label ms-2">Support Request</label>
             </div>
@@ -58,13 +58,13 @@
           <textarea id="message" name="message" class="form-control-lg w-100 mb-3"></textarea>
           <div class="d-none">This field is required</div>
           
-          <div class="mb-3">
+          <div class="mb-3 d-flex d-md-block gap-3 align-items-center">
             <input type="checkbox" id="consent" name="consent" class="form-check-input">
             <label for="consent" class="form-check-label">I consent to being contacted by the team &#42;</label>
             <div class="d-none">To submit this form, please consent to being contacted</div>
           </div>
             
-          <input type="submit" value="Submit" class="border-0 w-100 rounded-3">
+          <button type="submit" class="border-0 w-100 rounded-3">Submit</button>
           
           <div class="d-none">Message Sent!</div>
           <div class="d-none">Thanks for completing the form. We'll be in touch soon!</div>
