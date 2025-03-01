@@ -23,7 +23,7 @@
 }
 
 .row{
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--green-lighter-hsl);
 }
 
@@ -124,6 +124,15 @@ input[type="radio"]:checked + label::after {
   }
 }
 
+.error{
+  font-size: 0.8rem;
+  color: var(--red-hsl);
+}
+
+.border-red{
+  border: solid 2px var(--red-hsl) !important;
+}
+
 button[type="submit"]{
   background-color: var(--green-medium-hsl);
   color: var(--white-hsl);
@@ -137,4 +146,42 @@ button[type="submit"]{
 
 button[type="submit"]:hover{
   background-color: hsl(var(--green-medium-dark));
+}
+
+.success{
+  background-color: var(--grey-darker-hsl);
+  width: 80%;
+  top: 2%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  transition: all ease-in;
+}
+
+@media (min-width: 768px) {
+  .success{
+    width: fit-content;
+  }
+}
+
+.success .success-icon ~ div, .success-icon{
+  color: hsl(var(--white)) !important;
+  font-size: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  .success .success-icon ~ div, .success-icon{
+    font-size: 1.2rem !important;
+  }
+}
+
+.success div:not(:first-child){
+  color: var(--green-lighter-hsl);
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .success div:not(:first-child){
+    font-size: 1rem;
+  }
 }
